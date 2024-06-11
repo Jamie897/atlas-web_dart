@@ -1,9 +1,9 @@
 void main(List<String> args) {
-  
+  // check if args is empty
   if (args.isEmpty) {
     print('Please provide a number as an argument');
   }
-  
+  // parse args as an integers
   int nb = int.parse(args[0]);
 
   // check if number is bigger or equal to 80
