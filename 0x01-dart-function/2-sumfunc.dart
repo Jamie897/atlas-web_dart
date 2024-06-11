@@ -3,7 +3,7 @@ int add(int a, int b) {
 }   
 
 int sub(int a, int b) {
-  retunr a-b;
+  return a-b;
   }  
 
   String showFunc(int a, int b) {
