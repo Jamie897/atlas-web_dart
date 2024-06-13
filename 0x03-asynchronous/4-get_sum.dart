@@ -13,8 +13,8 @@ Future<double> calculateTotal() async {
     String userId = userJson['id'];
 
     // Step 2: Fetch user orders
-    List<String>? userOrders = await fetchUserOrders(userId);
-    if (userOrders == null || userOrders.isEmpty) {
+    List<String> userOrders = await fetchUserOrders(userId);
+    if (userOrders.isEmpty) {
       throw 'User orders not found or empty';
     }
 
@@ -37,5 +37,5 @@ Future<double> calculateTotal() async {
 
 void main() async {
   double total = await calculateTotal();
-  print('Total Price: \$${total.toStringAsFixed(2)}');
+  print(total.toStringAsFixed(1)); // Adjusted to match the expected output format
 }
