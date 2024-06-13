@@ -4,7 +4,10 @@ import '3-util.dart';
 
 Future<String> greetUser() async {
   try {
-    String userData = await fetchUserData();
+    String? userData = await fetchUserData();
+    if (userData == null) {
+      throw 'User data is null';
+    }
     Map<String, dynamic> json = jsonDecode(userData);
     String username = json['name'];
     return 'Hello $username';
