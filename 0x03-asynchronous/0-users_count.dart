@@ -1,4 +1,8 @@
 Future<void> usersCount() async {
-  int count = await fetchUsersCount();
-  print(count);
+  try {
+    int count = await fetchUsersCount();
+    print(count);
+  } catch (error) {
+    print('Error fetching user count: $error');
+  }
 }
